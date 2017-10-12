@@ -23,12 +23,70 @@ public class CompteBancaire implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    private String nomProprietaire;
+
+    private int solde;
+
+    public CompteBancaire(String nomProprietaire, int solde) {
+        this.nomProprietaire = nomProprietaire;
+        this.solde = solde;
+    }
+
+    /**
+     * Get the value of solde
+     *
+     * @return the value of solde
+     */
+    public int getSolde() {
+        return solde;
+    }
+
+    /**
+     * Set the value of solde
+     *
+     * @param solde new value of solde
+     */
+    public void setSolde(int solde) {
+        this.solde = solde;
+    }
+
+    /**
+     * Get the value of nomProprietaire
+     *
+     * @return the value of nomProprietaire
+     */
+    public String getNomProprietaire() {
+        return nomProprietaire;
+    }
+
+    /**
+     * Set the value of nomProprietaire
+     *
+     * @param nomProprietaire new value of nomProprietaire
+     */
+    public void setNomProprietaire(String nomProprietaire) {
+        this.nomProprietaire = nomProprietaire;
+    }
+
     public Long getId() {
         return id;
     }
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public void deposer(int montant) {
+        solde += montant;
+    }
+
+    public int retirer(int montant) {
+        if (montant < solde) {
+            solde -= montant;
+            return montant;
+        } else {
+            return 0;
+        }
     }
 
     @Override
@@ -55,5 +113,5 @@ public class CompteBancaire implements Serializable {
     public String toString() {
         return "tp3.CompteBancaire[ id=" + id + " ]";
     }
-    
+
 }
