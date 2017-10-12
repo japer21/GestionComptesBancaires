@@ -23,3 +23,6 @@ hs_err_pid*
 /GCBPerkova/nbproject/private/
 /GCBPerkova/GCBPerkova-war/nbproject/private/
 /GCBPerkova/GCBPerkova-ejb/nbproject/private/
+/GCBPerkova/GCBPerkova-ejb/build/*
+/GCBPerkova/GCBPerkova-war/build/*
+/GCBPerkova/GCBPerkova-ejb/dist/
