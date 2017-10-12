@@ -26,3 +26,6 @@ hs_err_pid*
 /GCBPerkova/GCBPerkova-ejb/build/*
 /GCBPerkova/GCBPerkova-war/build/*
 /GCBPerkova/GCBPerkova-ejb/dist/
+/GCBPerkova/build/
+/GCBPerkova/dist/
+/GCBPerkova/GCBPerkova-war/dist/
